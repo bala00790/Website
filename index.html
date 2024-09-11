@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resume</title>
     <style>
         * {
             margin: 0px;
@@ -13,7 +12,7 @@
         }
 
         body {
-            height: 100vh;
+            
             width: 100vw;
             background-color: #f5f5f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,31 +20,28 @@
             flex-direction: column;
             justify-content: start;
             align-items: center;
+            overflow: auto;
+            background-color: white;
+            
+            
         }
 
         .section1 {
             width: 70%;
             height: 12rem;
-            background: #8E2DE2;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+            background-color: purple;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            color: white;
-            border-radius: 5px;
             box-shadow:
-                0.6px 1.3px 1.4px rgba(0, 0, 0, 0.014),
-                1.5px 3.2px 3.5px rgba(0, 0, 0, 0.02),
-                2.9px 6px 6.5px rgba(0, 0, 0, 0.025),
-                5.1px 10.7px 11.6px rgba(0, 0, 0, 0.03),
-                9.6px 20.1px 21.7px rgba(0, 0, 0, 0.036),
-                23px 48px 52px rgba(0, 0, 0, 0.05);
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.042),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.061),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.075),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.089),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.108),
+  100px 100px 80px rgba(0, 0, 0, 0.15)
+;
         }
 
         .profile-img-section {
@@ -70,86 +66,50 @@
             border-radius: 50%;
         }
 
+        .section2, .section3, .section4 {
+            width: 70%;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
         .section2 {
-            width: 70%;
-            height: 6rem;
-            /* background-color: aquamarine; */
-            /* border: 1px solid aquamarine; */
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            /* padding: 10px; */
+            height: 12rem;
         }
 
-        .section3 {
-            width: 70%;
-            height: 16rem;
-            /* background-color: aquamarine; */
-            /* border: 1px solid aquamarine; */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            /* padding: 10px; */
-        }
+        /* .section3 {
+            height: 20rem;
+        } */
 
         .section4 {
-            width: 70%;
-            height: 12rem;
-            /* background-color: aquamarine; */
-            /* border: 1px solid aquamarine; */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            /* padding: 10px; */
+            height: 15rem;
+            font-style: italic;
         }
 
         .section-title {
-            /* height: 10%; */
+            color: darkblue;
             font-weight: bold;
+            margin: 3px 0;
         }
 
         .ed-table {
             width: 100%;
-            border: 2px solid gray;
+            height:20px;
+            border: 1px solid gray;
             border-collapse: collapse;
         }
 
-        th {
-            background-color: #8E2DE2;
-            color: #fff;
-        }
-
-        th,
-        td {
+        th, td {
             padding: 1rem;
             border: 1px solid gray;
         }
 
         .companies {
             font-weight: bold;
-
+            color: aquamarine;
         }
-
-        .color-primary {
-            color: #8E2DE2;
-        }
-
-        .section5 {
-            width: 70%;
-            height: 10rem;
-            /* background-color: aquamarine; */
-            /* border: 1px solid aquamarine; */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-            /* padding: 10px; */
-        }
-
         .section6 {
             width: 70%;
             height: 2rem;
@@ -167,103 +127,76 @@
             background: linear-gradient(to right, #4A00E0, #8E2DE2);
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
-
-        li {
-            list-style: square;
-            margin-left: 2rem;
-        }
-
-        .text-white {
-            color: white;
-        }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
 </head>
 
 <body>
+    
     <div class="section1">
         <div class="profile-img-section">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrlKOj_z8pKPFjKzkJU8OZi9yiLtyQD30dIA&s"
-                alt="doggo" class="profile-img">
+            <img class="profile-img" src="C:\Users\adhib\Downloads\bio.jpg" alt="Profile Image">
         </div>
         <div class="profile-data">
-            <h1>
-                Mohanraj M
-            </h1>
-            <h3>
-                max.neo.dev@gmail.com
-            </h3>
+            <h2>BALAJI</h2>
+            <p>Web Developer</p>
+            <p>Email: ssbalaji2004@gmail.com</p>
+            <p>Phone: +918610163060</p>
         </div>
     </div>
+
+    
     <div class="section2">
-        <h1 class="section-title color-primary">
-            Objective
-        </h1>
-        <p>
-            I am a highly motivated and results-driven sales professional seeking a challenging opportunity to leverage
-            my skills and experience in a dynamic sales environment.
-        </p>
-    </div>
-    <div class="section3">
-        <h1 class="section-title color-primary">
-            Education
-        </h1>
+        <h2 class="section-title">Education</h2>
         <table class="ed-table">
             <tr>
                 <th>Degree</th>
-                <th>Campus</th>
-                <th>Score %</th>
+                <th>Institution</th>
+                <th>Year</th>
             </tr>
             <tr>
-                <td>Deg1</td>
-                <td>School 1</td>
-                <td>85%</td>
+                <td>B.E. in Computer Science</td>
+                <td>SIET</td>
+                <td>2026</td>
             </tr>
             <tr>
-                <td>Deg2</td>
-                <td>School 2</td>
-                <td>85%</td>
-            </tr>
-            <tr>
-                <td>Deg3</td>
-                <td>School 3</td>
-                <td>85%</td>
+                <td>High School</td>
+                <td>MVM High School</td>
+                <td>2015</td>
             </tr>
         </table>
-    </div>
-    <div class="section4">
-        <h1 class="section-title color-primary">
-            Internships
-        </h1><br>
-        <p>
-            <span class="companies color-primary"> ACCOUNT MANAGER / VANARSDEL, LTD.</span> <br>
-            JUNE 20XX – PRESENT
-            Managed and grew key accounts by developing strong relationships, identifying opportunities, and
-            implementing effective sales strategies.
-        </p>
-        <br>
-        <p>
-            <span class="companies color-primary">MANAGER / VANARSDEL, LTD.</span><br>
-            JUNE 20XX – PRESENT
-            Managed and grew key accounts by developing strong relationships, identifying opportunities, and
-            implementing effective sales strategies.
 
-        </p>
     </div>
-    <div class="section5">
-        <h1 class="section-title color-primary">
-            Skills
-        </h1><br>
+
+    
+    <!-- <div class="section3">
+        <h2 class="section-title">Work Experience</h2>
+        <div>
+            <p><span class="companies">ABC Corp</span> - Software Engineer (2021 - Present)</p>
+            <ul>
+                <li>Developed web applications using React and Node.js.</li>
+                <li>Collaborated with cross-functional teams to deliver high-quality products.</li>
+            </ul>
+        </div>
+        <div>
+            <p><span class="companies">XYZ Solutions</span> - Junior Developer (2019 - 2021)</p>
+            <ul>
+                <li>Worked on PHP backend systems and improved efficiency by 20%.</li>
+                <li>Assisted in database management and API development.</li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="section4">
+        <h2 class="section-title">Skills</h2>
         <ul>
-            <li>MERN</li>
-            <li>Springboot</li>
-            <li>AWS</li>
-            <li>DevOPS</li>
+            <li>Programming Languages: HTML, CSS, JavaScript, PHP</li>
+            <li>Frameworks: React, Node.js</li>
+            <li>Databases: MySQL, MongoDB</li>
+            <li>Version Control: Git, GitHub</li>
         </ul>
+        <i class="fa-solid fa-phone"></i>
     </div>
-    <div class="section6">
+    <div class="section6"></div>
         <a href="tel:+91 9789681510">
             <i class="fa-solid fa-phone text-white"></i>
         </a>
@@ -274,6 +207,6 @@
             <i class="fa-brands fa-linkedin-in text-white"></i>
         </a>
     </div>
+    
 </body>
-
 </html>
