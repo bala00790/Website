@@ -2,28 +2,29 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <style>
+        *::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: purple;
+}
         * {
             margin: 0px;
             padding: 0px;
+            box-sizing: border-box;
         }
 
         body {
-            
-            width: 100vw;
             background-color: #f5f5f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: start;
             align-items: center;
-            overflow: auto;
-            background-color: white;
-            
-            
         }
 
         .section1 {
@@ -35,13 +36,12 @@
             justify-content: center;
             align-items: center;
             box-shadow:
-  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.042),
-  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.061),
-  12.5px 12.5px 10px rgba(0, 0, 0, 0.075),
-  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.089),
-  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.108),
-  100px 100px 80px rgba(0, 0, 0, 0.15)
-;
+                2.8px 2.8px 2.2px rgba(0, 0, 0, 0.042),
+                6.7px 6.7px 5.3px rgba(0, 0, 0, 0.061),
+                12.5px 12.5px 10px rgba(0, 0, 0, 0.075),
+                22.3px 22.3px 17.9px rgba(0, 0, 0, 0.089),
+                41.8px 41.8px 33.4px rgba(0, 0, 0, 0.108),
+                100px 100px 80px rgba(0, 0, 0, 0.15);
         }
 
         .profile-img-section {
@@ -52,6 +52,18 @@
             align-items: center;
         }
 
+        .profile-img {
+            height: 8rem;
+            width: 8rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
         .profile-data {
             width: 40%;
             display: flex;
@@ -60,92 +72,127 @@
             align-items: flex-start;
         }
 
-        .profile-img {
-            height: 8rem;
-            width: 8rem;
-            border-radius: 50%;
+        .profile-data h2 {
+            color: white;
         }
 
-        .section2, .section3, .section4 {
+        .profile-data p {
+            color: #ddd;
+        }
+
+        .section2,
+        .section3,
+        .section4 {
             width: 70%;
-        
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: start;
-        }
-
-        .section2 {
-            height: 12rem;
-        }
-
-        /* .section3 {
-            height: 20rem;
-        } */
-
-        .section4 {
-            height: 15rem;
-            font-style: italic;
+            margin-bottom: 1rem;
         }
 
         .section-title {
             color: darkblue;
             font-weight: bold;
-            margin: 3px 0;
+            margin: 10px 0;
         }
 
         .ed-table {
             width: 100%;
-            height:20px;
-            border: 1px solid gray;
+            border: 2px solid purple;
             border-collapse: collapse;
+            margin-top: 10px;
         }
 
-        th, td {
+        th {
+            background-color: #8E2DE2;
+        }
+
+        th,
+        td {
             padding: 1rem;
             border: 1px solid gray;
         }
 
-        .companies {
-            font-weight: bold;
-            color: aquamarine;
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
+
+        .skill-badge {
+            padding: 0.5rem 1rem;
+            background-color: #8E2DE2;
+            color: white;
+            border-radius: 10px;
+        }
+
         .section6 {
             width: 70%;
-            height: 2rem;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 3rem;
             font-weight: bold;
+            background-color: lightseagreen;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
 
-            background: #8E2DE2;
-            /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #4A00E0, #8E2DE2);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        a {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section1,
+            .section2,
+            .section3,
+            .section4,
+            .section6 {
+                width: 90%;
+            }
+
+            .profile-img {
+                height: 6rem;
+                width: 6rem;
+            }
+
+            .section1 {
+                flex-direction: column;
+                height: auto;
+                text-align: center;
+            }
+
+            .profile-img-section {
+                width: 100%;
+            }
+
+            .profile-data {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
-     
 </head>
 
 <body>
-    
+
     <div class="section1">
         <div class="profile-img-section">
-            <img class="profile-img" src="C:\Users\adhib\Downloads\bio.jpg" alt="Profile Image">
+            <img class="profile-img" src="https://via.placeholder.com/150" alt="Profile Image">
         </div>
         <div class="profile-data">
             <h2>BALAJI</h2>
             <p>Web Developer</p>
-            <p>Email: ssbalaji2004@gmail.com</p>
-            <p>Phone: +918610163060</p>
+            <p>ssbalaji2004@gmail.com</p>
+            <p>+918610163060</p>
         </div>
     </div>
 
-    
+    <br>
+
     <div class="section2">
         <h2 class="section-title">Education</h2>
         <table class="ed-table">
@@ -157,56 +204,43 @@
             <tr>
                 <td>B.E. in Computer Science</td>
                 <td>SIET</td>
-                <td>2026</td>
+                <td>2022</td>
             </tr>
             <tr>
                 <td>High School</td>
                 <td>MVM High School</td>
-                <td>2015</td>
+                <td>2016</td>
             </tr>
         </table>
-
     </div>
 
-    
-    <!-- <div class="section3">
-        <h2 class="section-title">Work Experience</h2>
-        <div>
-            <p><span class="companies">ABC Corp</span> - Software Engineer (2021 - Present)</p>
-            <ul>
-                <li>Developed web applications using React and Node.js.</li>
-                <li>Collaborated with cross-functional teams to deliver high-quality products.</li>
-            </ul>
-        </div>
-        <div>
-            <p><span class="companies">XYZ Solutions</span> - Junior Developer (2019 - 2021)</p>
-            <ul>
-                <li>Worked on PHP backend systems and improved efficiency by 20%.</li>
-                <li>Assisted in database management and API development.</li>
-            </ul>
-        </div>
-    </div> -->
     <div class="section4">
         <h2 class="section-title">Skills</h2>
-        <ul>
-            <li>Programming Languages: HTML, CSS, JavaScript, PHP</li>
-            <li>Frameworks: React, Node.js</li>
-            <li>Databases: MySQL, MongoDB</li>
-            <li>Version Control: Git, GitHub</li>
-        </ul>
-        <i class="fa-solid fa-phone"></i>
+        <div class="skills">
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">CSS</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Node.js</span>
+        </div>
     </div>
-    <div class="section6"></div>
-        <a href="tel:+91 9789681510">
-            <i class="fa-solid fa-phone text-white"></i>
+
+    <div class="section6">
+        <a href="tel:+91 8778908418">
+            <i class="fa-solid fa-phone"></i>
         </a>
-        <a href="mailto:max.neo.dev@gmail.com">
-            <i class="fa-solid fa-envelope text-white"></i>
+        <a href="mailto:adithyars22cse@srishakthi.ac.in">
+            <i class="fa-solid fa-envelope"></i>
         </a>
         <a href="https://www.linkedin.com/" target="_blank">
-            <i class="fa-brands fa-linkedin-in text-white"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
         </a>
     </div>
     
+    
+    
+
 </body>
+
 </html>
