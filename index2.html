@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"] {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Sign Up Form</h2>
+        <form action="#"  onsubmit="return myfunction()" method="POST">
+
+            <input type="text" id="name" name="" placeholder="Name" />
+
+            <input type="email" id="email" name="" placeholder="Email" />
+
+            <input type="password" id="password" name="" placeholder="Password" />
+
+            <input type="tel" id="phone" name="" placeholder="Number" />
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+       function myfunction() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let phone = document.getElementById("phone").value;
+
+        console.log('Name: ${name}, Email: ${email}, Password: ${password}, Phone: ${phone}');
+        alert("Submitted");
+       }
+    </script>
+
+</body>
+</html>
