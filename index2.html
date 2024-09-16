@@ -55,11 +55,13 @@
 
     <div class="form-container">
         <h2>Sign Up Form</h2>
-        <form action="#"  onsubmit="return myfunction()" method="POST">
+        <form action="#"  onsubmit="myfunction(event)" method="POST">
 
             <input type="text" id="name" name="" placeholder="Name" />
 
             <input type="email" id="email" name="" placeholder="Email" />
+
+            <input type="number" id="age"  name="" placeholder="Age" />
 
             <input type="password" id="password" name="" placeholder="Password" />
 
@@ -69,15 +71,42 @@
         </form>
     </div>
     <script>
-       function myfunction() {
+       function myfunction(e) {
+        e.preventDefault();
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
+        let age = document.getElementById("age").value;
         let password = document.getElementById("password").value;
         let phone = document.getElementById("phone").value;
 
-        console.log('Name: ${name}, Email: ${email}, Password: ${password}, Phone: ${phone}');
-        alert("Submitted");
+        if(name !== ""&& email !== "" && age !==0 && password !== "" && age !==0){
+            console.log("username/email already exists")
+        }
+        else{
+            console.log("ok")
+        }
+
+        //console.log('Name: ${name}, Email: ${email}, Password: ${password}, Phone: ${phone}');
+        //alert("Submitted");
+        
+       // console.log(name)
+
+        const data = {
+        username: name,
+        useremail: email,
+        userage: age >= 18 ? 'Major' : 'Minor' ,
+        userpassword: password,
+        userphone: phone
        }
+
+       const{username, useremail, userpassword,userphone} = data
+       alert(useremail)
+       }
+
+       let data1 = [1,2,3,4]
+       let data2 = ['a','b','c','d']
+       let data3 = [...data1,false,...data2]
+       console.log(data3)
     </script>
 
 </body>
